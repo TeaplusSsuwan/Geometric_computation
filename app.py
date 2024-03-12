@@ -9,7 +9,7 @@ def luas_segitiga():
   tinggi = float(input("  ป้อนความสูงของรูปสามเหลี่ยม: "))
 
   # คำนวณพื้นที่
-  area = luas_segitiga(alas * tinggi) / 2
+  area = (alas * tinggi) / 2
 
   # แสดงผลลัพธ์
   print("  พื้นที่ของรูปสามเหลี่ยม =", area )
@@ -144,7 +144,7 @@ def volume_ellipsoid():
   print('-'*30)
 
 
-def volume_kerucut(jarijari, tinggi):
+def volume_kerucut():
   """
   คำนวณปริมาตรของรูปทรงกรวย
   """
