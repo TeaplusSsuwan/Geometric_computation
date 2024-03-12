@@ -1,116 +1,223 @@
-def luas_segitiga(alas, tinggi):
+#---------------------------------------------------------------------------#
+
+def luas_segitiga():
   """
   คำนวณพื้นที่ของรูปสามเหลี่ยม
   """
-  return (alas * tinggi) / 2
+  # รับค่าพารามิเตอร์จากผู้ใช้ภายในฟังก์ชัน
+  alas = float(input("  ป้อนความยาวฐานของรูปสามเหลี่ยม: "))
+  tinggi = float(input("  ป้อนความสูงของรูปสามเหลี่ยม: "))
 
-def keliling_segitiga(sisi1, sisi2, sisi3):
-  """
-  คำนวณความยาวรอบรูปของรูปสามเหลี่ยม
-  """
-  return sisi1 + sisi2 + sisi3
+  # คำนวณพื้นที่
+  area = luas_segitiga(alas * tinggi) / 2
 
-def luas_persegi(sisi):
+  # แสดงผลลัพธ์
+  print("  พื้นที่ของรูปสามเหลี่ยม =", area )
+  print('-'*30)
+
+
+def luas_persegi():
   """
   คำนวณพื้นที่ของรูปสี่เหลี่ยมจัตุรัส
   """
-  return sisi ** 2
+  # รับค่าพารามิเตอร์จากผู้ใช้ภายในฟังก์ชัน
+  sisi = float(input("  ป้อนความยาวด้านของรูปสี่เหลี่ยมจัตุรัส: "))
 
-def keliling_persegi(sisi):
-  """
-  คำนวณความยาวรอบรูปของรูปสี่เหลี่ยมจัตุรัส
-  """
-  return 4 * sisi
+  # คำนวณพื้นที่
+  area = sisi ** 2
 
-def luas_persegipanjang(panjang, lebar):
+  # แสดงผลลัพธ์
+  print("  พื้นที่ของรูปสี่เหลี่ยมจัตุรัส =", area )
+  print('-'*30)
+ 
+
+def luas_persegipanjang():
   """
   คำนวณพื้นที่ของรูปสี่เหลี่ยมผืนผ้า
   """
-  return panjang * lebar
+  # รับค่าพารามิเตอร์จากผู้ใช้ภายในฟังก์ชัน
+  panjang = float(input("  ป้อนความยาวของรูปสี่เหลี่ยมผืนผ้า: "))
+  lebar = float(input("  ป้อนความกว้างของรูปสี่เหลี่ยมผืนผ้า: "))
+  
+  # คำนวณพื้นที่
+  area = panjang*lebar
 
-def keliling_persegipanjang(panjang, lebar):
-  """
-  คำนวณความยาวรอบรูปของรูปสี่เหลี่ยมผืนผ้า
-  """
-  return 2 * (panjang + lebar)
+  # แสดงผลลัพธ์
+  print("  พื้นที่ของรูปสี่เหลี่ยมผืนผ้า =", area )
+  print('-'*30)
 
-def luas_lingkaran(jarijari):
+
+def luas_lingkaran():
   """
   คำนวณพื้นที่ของรูปวงกลม
   """
-  return 3.14159 * jarijari ** 2
+  # รับค่าพารามิเตอร์จากผู้ใช้ภายในฟังก์ชัน
+  jarijari = float(input("  ป้อนรัศมีของรูปวงกลม: "))
 
-def keliling_lingkaran(jarijari):
-  """
-  คำนวณความยาวรอบรูปของรูปวงกลม
-  """
-  return 2 * 3.14159 * jarijari
+  # คำนวณพื้นที่
+  area = 3.14159 * jarijari ** 2
 
-def luas_trapesium(alas1, alas2, tinggi):
+  # แสดงผลลัพธ์
+  print("  พื้นที่ของรูปวงกลม =",area )
+  print('-'*30)
+
+
+def luas_trapesium():
   """
   คำนวณพื้นที่ของรูปสี่เหลี่ยมคางหมู
   """
-  return ((alas1 + alas2) * tinggi) / 2
+  # รับค่าพารามิเตอร์จากผู้ใช้ภายในฟังก์ชัน
+  alas1 = float(input("  ป้อนความยาวฐานล่างของรูปสี่เหลี่ยมคางหมู: "))
+  alas2 = float(input("  ป้อนความยาวฐานบนของรูปสี่เหลี่ยมคางหมู: "))
+  tinggi = float(input("  ป้อนความสูงของรูปสี่เหลี่ยมคางหมู: "))
 
-def keliling_trapesium(sisi1, sisi2, alas1, alas2):
-  """
-  คำนวณความยาวรอบรูปของรูปสี่เหลี่ยมคางหมู
-  """
-  return sisi1 + sisi2 + alas1 + alas2
+  # คำนวณพื้นที่
+  area = ((alas1 + alas2) * tinggi) / 2
 
-def volume_kubus(sisi):
+  # แสดงผลลัพธ์
+  print("  พื้นที่ของรูปสี่เหลี่ยมคางหมู =",area )
+  print('-'*30)
+  
+
+def volume_kubus():
   """
   คำนวณปริมาตรของรูปลูกบาศก์
   """
-  return sisi ** 3
+  # รับค่าพารามิเตอร์จากผู้ใช้ภายในฟังก์ชัน
+  sisi = float(input("  ป้อนความยาวด้านของรูปลูกบาศก์: "))
+  
+  # คำนวณปริมาตร
+  volume =sisi ** 3
 
-def volume_balok(panjang, lebar, tinggi):
+  # แสดงผลลัพธ์
+  print("  ปริมาตรของรูปลูกบาศก์ =",volume )
+  print('-'*30)
+  
+
+def volume_balok():
   """
   คำนวณปริมาตรของรูปทรงสี่เหลี่ยมผืนผ้า
   """
-  return panjang * lebar * tinggi
+  # รับค่าพารามิเตอร์จากผู้ใช้ภายในฟังก์ชัน
+  panjang = float(input("  ป้อนความยาวของรูปทรงสี่เหลี่ยมผืนผ้า: "))
+  lebar = float(input("  ป้อนความกว้างของรูปทรงสี่เหลี่ยมผืนผ้า: "))
+  tinggi = float(input("  ป้อนความสูงของรูปทรงสี่เหลี่ยมผืนผ้า: "))
 
-def volume_bola(jarijari):
+  # คำนวณปริมาตร
+  volume = panjang * lebar * tinggi
+
+  # แสดงผลลัพธ์
+  print("  ปริมาตรของรูปทรงสี่เหลี่ยมผืนผ้า =",volume )
+  print('-'*30)
+
+
+def volume_bola():
   """
   คำนวณปริมาตรของรูปทรงกลม
+  """  
+  # รับค่าพารามิเตอร์จากผู้ใช้ภายในฟังก์ชัน
+  jarijari = float(input("  ป้อนรัศมีของรูปทรงกลม: "))
+
+  # คำนวณปริมาตร
+  volume = (4/3) * 3.14159 * jarijari ** 3
+
+  # แสดงผลลัพธ์
+  print("  ปริมาตรของรูปทรงกลม =",volume )
+  print('-'*30)
+
+
+def volume_ellipsoid():
   """
-  return (4/3) * 3.14159 * jarijari ** 3
+  ฟังก์ชันนี้ใช้คำนวณปริมาตรของทรงวงรี
+  """
+
+  # รับค่าพารามิเตอร์จากผู้ใช้ภายในฟังก์ชัน
+  a = float(input("ป้อนความยาวแกนกึ่งเอก: "))
+  b = float(input("ป้อนความยาวแกนกึ่งโท: "))
+  c = float(input("ป้อนความยาวแกนกึ่งสูง: "))
+
+  # คำนวณปริมาตรของ
+  volume = (4/3) * 3.14159 * a * b * c
+
+  # แสดงผลลัพธ์
+  print("ปริมาตรของทรงวงรี =", volume)
+  print('-'*30)
+
+
+def volume_kerucut(jarijari, tinggi):
+  """
+  คำนวณปริมาตรของรูปทรงกรวย
+  """
+  # ตัวอย่างการใช้งาน
+  jarijari = float(input("ป้อนรัศมีของรูปทรงกรวย: "))
+  tinggi = float(input("ป้อนความสูงของรูปทรงกรวย: "))
+
+  # คำนวณปริมาตร
+  volume = (1/3) * 3.14159 * jarijari ** 2 * tinggi
+
+  # แสดงผลลัพธ์
+  print("ปริมาตรของรูปทรงกรวย =", volume)
+  print('-'*30)
+
+#---------------------------------------------------------------------------#
 
 def main():
-  # รับค่าพารามิเตอร์จากผู้ใช้
-  bentuk = input("เลือกประเภทของรูปทรง (1. สามเหลี่ยม, 2. สี่เหลี่ยมจัตุรัส, 3. สี่เหลี่ยมผืนผ้า, 4. วงกลม, 5. สี่เหลี่ยมคางหมู, 6. ลูกบาศก์, 7. บาล์ก, 8. ทรงกลม): ")
-  if bentuk == "1":
-    alas = float(input("ป้อนความยาวฐานของรูปสามเหลี่ยม: "))
-    tinggi = float(input("ป้อนความสูงของรูปสามเหลี่ยม: "))
-    print("พื้นที่ของรูปสามเหลี่ยม =", luas_segitiga(alas, tinggi))
-  elif bentuk == "2":
-    sisi = float(input("ป้อนความยาวด้านของรูปสี่เหลี่ยมจัตุรัส: "))
-    print("พื้นที่ของรูปสี่เหลี่ยมจัตุรัส =", luas_persegi(sisi))
-  elif bentuk == "3":
-    panjang = float(input("ป้อนความยาวของรูปสี่เหลี่ยมผืนผ้า: "))
-    lebar = float(input("ป้อนความกว้างของรูปสี่เหลี่ยมผืนผ้า: "))
-    print("พื้นที่ของรูปสี่เหลี่ยมผืนผ้า =", luas_persegipanjang(panjang, lebar))
-  elif bentuk == "4":
-    jarijari = float(input("ป้อนรัศมีของรูปวงกลม: "))
-    print("พื้นที่ของรูปวงกลม =", luas_lingkaran(jarijari))
-  elif bentuk == "5":
-    alas1 = float(input("ป้อนความยาวฐานล่างของรูปสี่เหลี่ยมคางหมู: "))
-    alas2 = float(input("ป้อนความยาวฐานบนของรูปสี่เหลี่ยมคางหมู: "))
-    tinggi = float(input("ป้อนความสูงของรูปสี่เหลี่ยมคางหมู: "))
-    print("พื้นที่ของรูปสี่เหลี่ยมคางหมู =", luas_trapesium(alas1, alas2, tinggi))
-  elif bentuk == "6":
-    sisi = float(input("ป้อนความยาวด้านของรูปลูกบาศก์: "))
-    print("ปริมาตรของรูปลูกบาศก์ =", volume_kubus(sisi))
-  elif bentuk == "7":
-    panjang = float(input("ป้อนความยาวของรูปทรงสี่เหลี่ยมผืนผ้า: "))
-    lebar = float(input("ป้อนความกว้างของรูปทรงสี่เหลี่ยมผืนผ้า: "))
-    tinggi = float(input("ป้อนความสูงของรูปทรงสี่เหลี่ยมผืนผ้า: "))
-    print("ปริมาตรของรูปทรงสี่เหลี่ยมผืนผ้า =", volume_balok(panjang, lebar, tinggi))
-  elif bentuk == "8":
-    jarijari = float(input("ป้อนรัศมีของรูปทรงกลม: "))
-    print("ปริมาตรของรูปทรงกลม =", volume_bola(jarijari))
-  else:
-    print("รูปแบบไม่ถูกต้อง")
+  while True:
+    print('-'*30)
+    print("โปรแกรมคำนวณทางเรขาคณิต")
+    print('-'*30)
+    # รับค่าพารามิเตอร์จากผู้ใช้เพื่อเลือกประเภทการคำนวณ
+    type = input("เลือกประเภทการคำนวณ \n     1 : การคำนวณพื้นที่ของรูปเราขาคณิต \n     2 : การคำนวณหาปริมาตรของรูปเราขาคณิต \n"+ ("-"*20) +"\n  กรอกหมายเลขของประเภทการคำนวณ : ")
+    print('-'*30)
+    if type == "1":
+      # รับค่าพารามิเตอร์จากผู้ใช้เพื่อเลือกประเภทของรูปทรง
+      print('  ชุดโปรแกรมคำนวณพื้นที่')
+      bentuk = input("  เลือกประเภทของรูปทรง \n     1 : สามเหลี่ยม \n     2 : สี่เหลี่ยมจัตุรัส \n     3 : สี่เหลี่ยมผืนผ้า \n     4 : วงกลม \n     5 : สี่เหลี่ยมคางหมู \n"+ ("-"*20) +"\n  กรอกหมายเลขของประเภทรูปทรง : ")
+      print('-'*30)
+      if bentuk == "1":
+        luas_segitiga()
+      elif bentuk == "2":
+        luas_persegi()
+      elif bentuk == "3":
+        luas_persegipanjang()
+      elif bentuk == "4":
+        luas_lingkaran()
+      elif bentuk == "5":
+        luas_trapesium()
+      else:
+        print("  รูปแบบไม่ถูกต้อง")
+    elif type == "2":
+      # รับค่าพารามิเตอร์จากผู้ใช้เพื่อเลือกประเภทของรูปทรง
+      print('  ชุดโปรแกรมคำนวณปริมาตร')
+      bentuk = input("  เลือกประเภทของรูปทรง \n     6 : ลูกบาศก์ \n     7 : บาล์ก \n     8 : ทรงกลม\n     9 : ทรงรี\n     10 : ทรงกรวย\n"+ ("-"*20) +"\n  กรอกหมายเลขของประเภทรูปทรง : ")
+      print('-'*30)
+      if bentuk == "6":
+        volume_kubus()
+      elif bentuk == "7":
+        volume_balok()
+      elif bentuk == "8":
+        volume_bola()
+      elif bentuk == "9":
+        volume_ellipsoid()
+      elif bentuk == "10":
+        volume_kerucut()
+      else:
+        print("  รูปแบบไม่ถูกต้อง")
+    else:
+      print("  รูปแบบไม่ถูกต้อง")
 
+    # ตรวจสอบว่าผู้ใช้ต้องการออกหรือไม่
+    choice = input("ต้องการออกหรือไม่ (y/n): ")
+    if choice.lower() == "y":
+      break
+    elif choice.lower() == "n":
+      continue
+    else:
+      print("ตัวเลือกไม่ถูกต้อง")
+
+  print("--- โปรแกรมเสร็จสิ้นการทำงาน ---")
+  print('-'*30)
 if __name__ == "__main__":
   main()
+
+  #---------------------------------------------------------------------------#
